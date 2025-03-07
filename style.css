@@ -3,21 +3,38 @@ body {
     background-color: #faf6f6;
     margin: 0;
     padding: 0;
+    color: #3d2c2c;
 }
 
 .header {
     text-align: center;
-    padding: 2rem;
-    background-color: #ffb6c1;
+    padding: 2.5rem;
+    background-color: #f8e6d8;
+    color: #2b1f1f;
 }
 
 .logo {
-    max-width: 200px;
-    margin-bottom: 1rem;
+    max-width: 300px;
+    height: auto;
+    margin: 1rem auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Versão responsiva */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 200px;
+    }
+}
+
+/* Opcional: efeito hover suave */
+.logo:hover {
+    transform: scale(1.02);
 }
 
 .cta-button {
-    background-color: #c25b5b;
+    background-color: #8b4513;
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -25,6 +42,13 @@ body {
     font-size: 1.2rem;
     cursor: pointer;
     margin: 1rem 0;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #723a0f;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.3);
 }
 
 .grid-container {
@@ -58,7 +82,11 @@ body {
 .recipe-title {
     padding: 1rem;
     text-align: center;
-    color: #333;
+    color: #2b1f1f;
+}
+
+h1, h2, h3 {
+    color: #2b1f1f;
 }
 
 .bonus-section {
@@ -66,13 +94,14 @@ body {
     padding: 2rem;
     text-align: center;
     margin-top: 2rem;
+    color: #2b1f1f;
 }
 
 .pricing-section {
     text-align: center;
     padding: 4rem 1rem;
     background-color: #b4c7a5;
-    color: #5c4d4d;
+    color: #3d2c2c;
     max-width: 800px;
     margin: 0 auto;
     border-radius: 20px;
@@ -84,7 +113,7 @@ body {
 .pricing-section h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: #765c5c;
+    color: #2b1f1f;
     font-weight: 600;
 }
 
@@ -92,11 +121,11 @@ body {
     font-size: 1.4rem;
     margin: 0.8rem 0;
     line-height: 1.6;
-    color: #5c4d4d;
+    color: #3d2c2c;
 }
 
 .pricing-section p strong {
-    color: #765c5c;
+    color: #2b1f1f;
     font-size: 1.6rem;
 }
 
@@ -131,5 +160,6 @@ body {
 }
 
 footer {
-    background-color: #f8e6d8;
+    background-color: #bf8b63;
+    color: #2b1f1f;
 }
