@@ -255,3 +255,143 @@ footer {
         grid-template-columns: repeat(5, 1fr);
     }
 }
+
+/* Ajustes Mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem 1rem;
+    }
+
+    .header {
+        padding: 1rem;
+    }
+
+    .logo-img {
+        max-width: 200px;
+    }
+
+    .main-title {
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .btn-container {
+        margin-bottom: 2rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 1.2rem 1.8rem;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+        margin-bottom: 3rem;
+    }
+
+    .card {
+        border-radius: 0.375rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .bonus-section {
+        padding: 2rem 0;
+    }
+
+    .price-section {
+        padding: 2rem 1rem;
+        margin: 1rem;
+        border-radius: 0.375rem;
+    }
+
+    .product-img {
+        margin-bottom: 2rem;
+    }
+
+    /* Ajustes específicos do Footer */
+    footer {
+        padding: 2rem 0;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
+
+    .footer-content {
+        padding: 0 1rem;
+    }
+
+    .footer-logo img {
+        max-width: 200px;
+    }
+
+    .footer-brand {
+        font-size: 1.25rem;
+    }
+
+    .footer-copyright {
+        font-size: 0.875rem;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 375px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        font-size: 0.875rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Melhorias gerais de performance e usabilidade mobile */
+@media (max-width: 768px) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn-primary:active, .btn-secondary:active {
+        transform: scale(0.98);
+    }
+
+    .card {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+}
+
+/* Garantir que não haja scroll horizontal em nenhum tamanho de tela */
+html, body {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* Melhorar a visualização de imagens em dispositivos de alta resolução */
+img {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
