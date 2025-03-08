@@ -1,78 +1,159 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eBook Maternidade</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guia Completo da Maternidade</title>
+    <meta name="description" content="Brincadeiras Infantis - Guia completo para mães" />
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="header">
-        <img src="Untitled design-Photoroom.png" alt="Logo Maternidade" class="logo">
-        <h1>Guia Completo da Maternidade</h1>
-        <button class="cta-button">Quero Acessar o eBook</button>
-    </div>
-
-    <div class="grid-container">
-        <div class="recipe-card">
-            <img src="brincadeiras.jpeg" alt="Amamentação" class="recipe-image">
-            <!--<h3 class="recipe-title">Guia de Amamentação</h3>-->
-        </div>
-        <div class="recipe-card">
-            <img src="criando.jpeg" alt="Sono do Bebê" class="recipe-image">
-            <!--<h3 class="recipe-title">Rotina de Sono</h3>-->
-        </div>
-        <div class="recipe-card">
-            <img src="montando.jpeg" alt="Primeiros Dias" class="recipe-image">
-            <!--<h3 class="recipe-title">Primeiros Dias com o Bebê</h3>-->
-        </div>
-        <div class="recipe-card">
-            <img src="pescaria.jpeg" alt="Alimentação" class="recipe-image">
-            <!--<h3 class="recipe-title">Alimentação da Mamãe</h3>-->
-        </div>
-        <div class="recipe-card">
-            <img src="transf_colher.jpeg" alt="Exercícios" class="recipe-image">
-            <!--<h3 class="recipe-title">Exercícios Pós-Parto</h3>-->
-        </div>
-    </div>
-
-    <div class="bonus-section">
-        <h2>BÔNUS:</h2>
-        <div class="grid-container">
-            <div class="recipe-card">
-                <img src="brincando_bonus.jpeg" alt="Sovete" class="recipe-image">
-                <!--<h3 class="recipe-title">Sovete</h3>-->
-            </div>
-            <div class="recipe-card">
-                <img src="pintura_bonus.jpeg" alt="Sorvete de Chocolate" class="recipe-image">
-                <!--<h3 class="recipe-title">Sorvete</h3>-->
-            </div>
-            <div class="recipe-card">
-                <img src="tranf_colher_bonus.jpeg" alt="Croissant" class="recipe-image">
-                <!--<h3 class="recipe-title">Croissant</h3>-->
-            </div>
-            <div class="recipe-card">
-                <img src="cabaninha_bonus.jpeg" alt="Brownie" class="recipe-image">
-                <!--<h3 class="recipe-title">Brownie</h3>-->
-            </div>
-            
-        </div>
-        <button class="cta-button">Quero todas essas receitas</button>
-    </div>
-
-    <div class="pricing-section">
-        <h2>Afinal, quanto custa?</h2>
+  </head>
+  <body>
+    <!-- Header section with logo -->
+    <div class="container">
+      <div class="header">
         
-        <div class="devices-preview">
-            <img src="Untitled design-Photoroom (1).png" alt="Visualização em diferentes dispositivos">
+          <img src="Untitled design-Photoroom.png" alt="Book icon" class="logo-img" />
+        
+      </div>
+
+      <!-- Main title -->
+      <div class="main-title">
+        <h1 class="title">Guia Completo da Maternidade</h1>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="btn-container">
+        <button class="btn-primary">
+          Quero Acessar o eBook
+        </button>
+      </div>
+
+      <!-- Activity cards section -->
+      <div class="grid grid-5">
+        <div class="card">
+          <img src="brincadeiras.jpeg" alt="Brincadeiras" />
+          <div class="card-overlay">
+            <!-- <p class="card-title">Brincadeiras</p>
+            <p class="card-subtitle">exploração sensorial</p> -->
+          </div>
         </div>
         
-        <button class="cta-button">Quero adquirir agora</button>
+        <div class="card">
+          <img src="criando.jpeg" alt="Criando" />
+          <div class="card-overlay">
+            <!-- <p class="card-title">Criando</p>
+            <p class="card-subtitle">Garrafa sensorial</p> -->
+          </div>
+        </div>
+        
+        <div class="card">
+          <img src="montando.jpeg" alt="Montando" />
+          <div class="card-overlay">
+            <!-- <p class="card-title">Montando</p>
+            <p class="card-subtitle">Encaixe e tira</p> -->
+          </div>
+        </div>
+        
+        <div class="card">
+          <img src="pescaria.jpeg" alt="Pescaria" />
+          <div class="card-overlay">
+            <!-- <p class="card-title">Pescaria</p>
+            <p class="card-subtitle">De objetos</p> -->
+          </div>
+        </div>
+        
+        <div class="card">
+          <img src="transf_colher.jpeg" alt="Transferência" />
+          <div class="card-overlay">
+            <!-- <p class="card-title">Transferência</p>
+            <p class="card-subtitle">Com colheres</p> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Bonus section -->
+      <div class="bonus-section">
+        <div class="section-title">
+          <h2>BÔNUS:</h2>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="card">
+            <img src="brincando_bonus.jpeg" alt="Brincando" />
+            <div class="card-overlay">
+              <!-- <p class="card-title">Brincando</p>
+              <p class="card-subtitle">Macarrão no palito</p> -->
+            </div>
+          </div>
+          
+          <div class="card">
+            <img src="pintura_bonus.jpeg" alt="Pintura" />
+            <div class="card-overlay">
+              <!-- <p class="card-title">Pintura</p>
+              <p class="card-subtitle">Comestível</p> -->
+            </div>
+          </div>
+          
+          <div class="card">
+            <img src="tranf_colher_bonus.jpeg" alt="Transferência" />
+            <div class="card-overlay">
+              <!-- <p class="card-title">Transferência</p>
+              <p class="card-subtitle">Com colheres</p> -->
+            </div>
+          </div>
+          
+          <div class="card">
+            <img src="cabaninha_bonus.jpeg" alt="Cabaninha" />
+            <div class="card-overlay">
+              <!-- <p class="card-title">Cabaninha</p>
+              <p class="card-subtitle">Passa-passa</p> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Second CTA Button -->
+        <div class="btn-container">
+          <button class="btn-primary">
+            Quero todas esses eBooks
+          </button>
+        </div>
+      </div>
+
+      <!-- Price section -->
+      <div class="price-section">
+        <div class="section-title">
+          <h2>Afinal, quanto custa?</h2>
+        </div>
+
+        <!-- Product showcase -->
+        <div class="product-img">
+          <img 
+            src="Untitled design-Photoroom (1).png" 
+            alt="Product mockups"
+          />
+        </div>
+
+        <!-- Final CTA Button -->
+        <div class="btn-container">
+          <button class="btn-primary">
+            Quero adquirir agora
+          </button>
+        </div>
+      </div>
     </div>
 
+    <!-- Footer -->
     <footer>
-        <img src="Logo.png" alt="Logo Alcemi" class="footer-logo">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img 
+            src="Logo.png" 
+            alt="Logo"
+          />
+      </div>
     </footer>
-</body>
+    
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  </body>
 </html>
-
