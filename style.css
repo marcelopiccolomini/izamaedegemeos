@@ -89,10 +89,15 @@ body {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
 }
 
 .btn-primary:hover {
     background-color: #6b3003;
+    color: white;
+    text-decoration: none;
 }
 
 .btn-secondary {
