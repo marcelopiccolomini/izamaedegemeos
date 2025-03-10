@@ -18,7 +18,7 @@ body {
 .header {
     align-items: center;
     justify-content: center;
-    background-color: #ffffff;
+    background-color: #bc907a;
     width: 100vw;
     position: relative;
     left: 50%;
@@ -361,7 +361,7 @@ footer {
     .price-section .product-img,
     .price-section .btn-container {
         padding: 0 1rem;
-        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .product-img {
