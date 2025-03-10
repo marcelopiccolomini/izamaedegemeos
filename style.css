@@ -210,7 +210,7 @@ body {
 .product-img {
     display: flex;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 .product-img img {
@@ -365,7 +365,9 @@ footer {
     }
 
     .product-img {
-        margin-bottom: 2rem;
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+        margin-right: 25px;
     }
 
     /* Ajustes específicos do Footer */
