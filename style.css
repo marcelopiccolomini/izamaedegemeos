@@ -204,7 +204,6 @@ body {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 1rem;
 }
 
 .product-img {
@@ -360,8 +359,7 @@ footer {
     .price-section .section-title,
     .price-section .product-img,
     .price-section .btn-container {
-        padding: 0 1rem;
-        margin-right: 30px;
+        margin-right: 60px;
     }
 
     .product-img {
