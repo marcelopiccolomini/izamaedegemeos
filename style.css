@@ -182,25 +182,44 @@ body {
 }
 
 .bonus-section {
-    padding: 2.5rem 0;
+    background-color: #FDE1D3;
+    padding: 5rem 0;
     width: 100vw;
     position: relative;
     left: 50%;
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    background-color: #f8e6d8;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.03);
+    box-sizing: border-box;
 }
 
 .bonus-section .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 3rem 2rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.bonus-section .section-title {
+    text-align: center;
+    margin: 2rem 0 4rem 0;
+}
+
+.bonus-section .section-title h2 {
+    color: #3A2618;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+    padding-top: 1rem;
 }
 
 .price-section {
-    background-color: #af8d73;
-    padding: 4rem 0;
+    background-color: #FDE1D3;
+    padding: 5rem 0;
     margin-bottom: 4rem;
     width: 100vw;
     position: relative;
@@ -208,16 +227,26 @@ body {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.03);
     box-sizing: border-box;
 }
 
 .price-section .section-title,
 .price-section .product-img,
 .price-section .btn-container {
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.price-section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .product-img {
@@ -275,7 +304,7 @@ footer {
 }
 
 .benefits-section {
-    background-color: #e8c5b0;
+    background-color: #FDE1D3;
     padding: 5rem 0;
     width: 100vw;
     position: relative;
@@ -290,7 +319,7 @@ footer {
 .benefits-container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 3rem 2rem;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 20px;
     backdrop-filter: blur(10px);
@@ -335,15 +364,58 @@ footer {
     min-width: 30px;
 }
 
+.benefits-section .section-title {
+    text-align: center;
+    margin: 2rem 0 4rem 0;
+}
+
 .benefits-section .section-title h2 {
     color: #3A2618;
     margin-bottom: 2rem;
     font-size: 2.2rem;
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+    padding-top: 1rem;
 }
 
 .benefits-section .btn-container {
     padding-bottom: 2rem;
+}
+
+.price-features {
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 800px;
+    text-align: justify;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.price-features p {
+    font-size: 1.3rem;
+    color: #3A2618;
+    margin: 1rem 0;
+    line-height: 1.6;
+    padding: 1rem;
+    background: white;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-features p:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.price-cta-text {
+    font-size: 1.4rem;
+    color: #3A2618;
+    margin: 2rem auto;
+    max-width: 800px;
+    line-height: 1.6;
+    font-weight: 500;
+    text-align: center;
+    padding: 1rem;
 }
 
 /* Media Queries */
@@ -425,37 +497,58 @@ footer {
         margin-bottom: 3rem;
     }
 
+    .bonus-section .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+        margin-bottom: 2rem;
+        padding: 0 0.5rem;
+    }
+
     .card {
         border-radius: 0.375rem;
+    }
+
+    .bonus-section .card {
+        border-radius: 0.375rem;
+    }
+
+    .bonus-section .container {
+        padding: 2rem 1rem;
+        margin: 0 auto;
     }
 
     .section-title h2 {
         font-size: 1.5rem;
     }
 
-    .bonus-section {
-        padding: 2rem 0;
-    }
-
-    .bonus-section .container {
-        padding: 1rem;
-        margin-left: 10px;
-    }
-
+    .bonus-section,
     .price-section {
-        padding: 2rem 0;
+        padding: 3rem 0;
+    }
+    
+    .bonus-section .section-title,
+    .price-section .section-title {
+        margin: 1rem 0 2rem 0;
+    }
+    
+    .bonus-section .section-title h2,
+    .price-section .section-title h2 {
+        font-size: 1.8rem;
+        padding-top: 0.5rem;
     }
 
-    .price-section .section-title,
-    .price-section .product-img,
-    .price-section .btn-container {
-        margin-right: 60px;
+    .price-features {
+        padding: 1rem;
     }
 
-    .product-img {
-        margin-bottom: 0rem;
-        margin-top: 0rem;
-        margin-right: 25px;
+    .price-features p {
+        font-size: 1.0rem;
+        padding: 0.1rem;
+    }
+
+    .price-cta-text {
+        font-size: 1.2rem;
+        padding: 0.8rem;
     }
 
     /* Ajustes específicos do Footer */
@@ -494,7 +587,7 @@ footer {
     }
     
     .benefits-container {
-        padding: 0 1rem;
+        padding: 2rem 1rem;
     }
     
     .benefits-list {
@@ -507,15 +600,21 @@ footer {
         padding: 0.8rem;
     }
 
+    .benefits-section .section-title {
+        margin: 1rem 0 2rem 0;
+    }
+    
     .benefits-section .section-title h2 {
-        font-size: 1.8rem;
+        padding-top: 0.5rem;
     }
 }
 
 /* Para telas realmente pequenas, ajustar proporcionalmente */
 @media (max-width: 375px) {
-    .grid {
+    .grid,
+    .bonus-section .grid {
         grid-template-columns: 1fr;
+        gap: 0.8rem;
     }
 
     .title {
@@ -596,41 +695,4 @@ img {
 .fade-in.visible {
     opacity: 1;
     transform: translateX(0);
-}
-
-.price-features {
-    margin: 2rem auto;
-    max-width: 600px;
-    text-align: left;
-}
-
-.price-features p {
-    font-size: 1.3rem;
-    color: #3A2618;
-    margin: 1rem 0;
-    line-height: 1.6;
-}
-
-.price-cta-text {
-    font-size: 1.4rem;
-    color: #3A2618;
-    margin: 2rem auto;
-    max-width: 800px;
-    line-height: 1.6;
-    font-weight: 500;
-}
-
-@media (max-width: 768px) {
-    .price-features {
-        padding: 0 1rem;
-    }
-
-    .price-features p {
-        font-size: 1.1rem;
-    }
-
-    .price-cta-text {
-        font-size: 1.2rem;
-        padding: 0 1rem;
-    }
 }
