@@ -18,7 +18,10 @@
 
       <!-- Main title -->
       <div class="main-title fade-in">
-        <h1 class="title">Guia Completo da Maternidade</h1>
+        <h1 class="title">Você quer mais ideias para brincar com seu bebê?</h1>
+        <h2 class="subtitle">Aqui estão as melhores!
+          Pare de perder tempo procurando brincadeiras soltas na internet. 
+          Este eBook traz um guia prático com atividades simples e que realmente funcionam!</h2>
       </div>
 
       <!-- CTA Button -->
@@ -83,7 +86,8 @@
       <!-- Bonus section -->
       <div class="bonus-section fade-in">
         <div class="section-title">
-          <h2>BÔNUS:</h2>
+          <h2>Baixe agora e tenha um repertório completo de brincadeiras para bebês de 0 a 2 anos.
+          </h2>
         </div>
 
         <div class="grid grid-4">
@@ -123,15 +127,45 @@
         <!-- Second CTA Button -->
         <div class="btn-container">
           <a href="https://pay.kiwify.com.br/R3DPpOh" class="btn-primary">
-            Quero todas esses eBooks
+            QUERO MINHA CÓPIA AGORA
           </a>
+        </div>
+      </div>
+
+      <!-- Benefits section -->
+      <div class="benefits-section fade-in">
+        <div class="benefits-container">
+          <div class="section-title">
+            <h2>Por que este eBook é perfeito para você?</h2>
+          </div>
+
+          <ul class="benefits-list">
+            <li>Atividades testadas e aprovadas – Nada de ideias aleatórias! Cada brincadeira foi pensada para estimular o desenvolvimento do seu bebê.</li>
+            <li>Simples e eficaz – Você não precisa de brinquedos caros nem de muito tempo para aplicar as brincadeiras.</li>
+            <li>Mais conexão e menos telas – Crie memórias especiais enquanto seu bebê aprende brincando.</li>
+            <li>Acesso imediato – Compre agora e comece a brincar hoje mesmo com o que você tem em casa.</li>
+          </ul>
+
+          <div class="btn-container">
+            <a href="https://pay.kiwify.com.br/R3DPpOh" class="btn-primary">
+              QUERO TER TODAS ESSAS IDEIAS
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Price section -->
       <div class="price-section fade-in">
         <div class="section-title">
-          <h2>Afinal, quanto custa?</h2>
+          <h2>⏳ Se você chegou até aqui, já sabe que precisa desse eBook!</h2>
+          
+          <div class="price-features">
+            <p>📌 Preço especial por tempo limitado</p>
+            <p>📌 Material digital – acesso imediato</p>
+            <p>📌 Investimento único para usar todos os dias</p>
+          </div>
+
+          <p class="price-cta-text">Não perca mais tempo pensando! Tenha sempre uma brincadeira pronta para o seu bebê.</p>
         </div>
 
         <!-- Product showcase -->
@@ -145,7 +179,7 @@
         <!-- Final CTA Button -->
         <div class="btn-container">
           <a href="https://pay.kiwify.com.br/R3DPpOh" class="btn-primary">
-            Quero adquirir agora
+            QUERO MEU EBOOK AGORA
           </a>
         </div>
       </div>
@@ -162,7 +196,7 @@
       </div>
     </footer>
     
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG -->
+    <!-- Scripts -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script>
       // Função para verificar elementos visíveis
@@ -170,8 +204,9 @@
         const elements = document.querySelectorAll('.fade-in');
         
         elements.forEach(element => {
-          const elementTop = element.getBoundingClientRect().top;
-          const elementBottom = element.getBoundingClientRect().bottom;
+          const rect = element.getBoundingClientRect();
+          const elementTop = rect.top;
+          const elementBottom = rect.bottom;
           
           // Altura da viewport
           const windowHeight = window.innerHeight;
@@ -179,12 +214,28 @@
           // Verifica se o elemento está visível na viewport
           if (elementTop < windowHeight - 100 && elementBottom >= 0) {
             element.classList.add('visible');
+          } else {
+            // Remove a classe visible quando o elemento sai da viewport
+            element.classList.remove('visible');
           }
         });
       }
 
-      // Adiciona os event listeners
-      window.addEventListener('scroll', checkVisibility);
+      // Adiciona os event listeners com throttle para melhor performance
+      let isScrolling;
+      window.addEventListener('scroll', () => {
+        // Limpa o timeout anterior
+        window.clearTimeout(isScrolling);
+        
+        // Executa a função
+        checkVisibility();
+        
+        // Define um novo timeout
+        isScrolling = setTimeout(() => {
+          checkVisibility();
+        }, 60);
+      });
+      
       window.addEventListener('load', checkVisibility);
       
       // Executa a primeira verificação
