@@ -10,26 +10,26 @@
   <body>
     <!-- Header section with logo -->
     <div class="container">
-      <div class="header">
+      <div class="header fade-in">
         
           <img src="Untitled design-Photoroom.png" alt="Book icon" class="logo-img" />
         
       </div>
 
       <!-- Main title -->
-      <div class="main-title">
+      <div class="main-title fade-in">
         <h1 class="title">Guia Completo da Maternidade</h1>
       </div>
 
       <!-- CTA Button -->
-      <div class="btn-container">
+      <div class="btn-container fade-in">
         <a href="https://pay.kiwify.com.br/R3DPpOh" class="btn-primary">
           Quero Acessar o eBook
         </a>
       </div>
 
       <!-- Activity cards section -->
-      <div class="grid grid-5">
+      <div class="grid grid-5 fade-in">
         <div class="card">
           <img src="brincadeiras.jpeg" alt="Brincadeiras" />
           <div class="card-overlay">
@@ -81,7 +81,7 @@
       </div>
 
       <!-- Bonus section -->
-      <div class="bonus-section">
+      <div class="bonus-section fade-in">
         <div class="section-title">
           <h2>BÔNUS:</h2>
         </div>
@@ -129,7 +129,7 @@
       </div>
 
       <!-- Price section -->
-      <div class="price-section">
+      <div class="price-section fade-in">
         <div class="section-title">
           <h2>Afinal, quanto custa?</h2>
         </div>
@@ -152,7 +152,7 @@
     </div>
 
     <!-- Footer -->
-    <footer>
+    <footer class="fade-in">
       <div class="footer-content">
         <div class="footer-logo">
           <img 
@@ -164,5 +164,31 @@
     
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script>
+      // Função para verificar elementos visíveis
+      function checkVisibility() {
+        const elements = document.querySelectorAll('.fade-in');
+        
+        elements.forEach(element => {
+          const elementTop = element.getBoundingClientRect().top;
+          const elementBottom = element.getBoundingClientRect().bottom;
+          
+          // Altura da viewport
+          const windowHeight = window.innerHeight;
+          
+          // Verifica se o elemento está visível na viewport
+          if (elementTop < windowHeight - 100 && elementBottom >= 0) {
+            element.classList.add('visible');
+          }
+        });
+      }
+
+      // Adiciona os event listeners
+      window.addEventListener('scroll', checkVisibility);
+      window.addEventListener('load', checkVisibility);
+      
+      // Executa a primeira verificação
+      checkVisibility();
+    </script>
   </body>
 </html>
