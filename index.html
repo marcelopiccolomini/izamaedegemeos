@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap">
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <meta property="og:title" content="Manual Completo: De filhos birrentos a Crianças Tranquilas" />
-    <meta property="og:description" content="Transforme birras em conexão com seu filho através de brincadeiras e métodos práticos" />
-    <meta property="og:type" content="website" />
+    <meta content="Manual Completo: De filhos birrentos a Crianças Tranquilas" />
+    <meta content="Transforme birras em conexão com seu filho através de brincadeiras e métodos práticos" />
+    <meta content="website" />
 
 
     
@@ -23,11 +23,11 @@
       }
 	  .top-icon {
       position: absolute;
-      top: -80px;
+      top: -10px;
       left: 50%;
       transform: translateX(-50%);
-      width: 850px;
-      height: 250px;
+      width: 200px;
+      height: auto;
     }
     </style>
   </head>
@@ -36,17 +36,21 @@
     <div id="root" class="flex flex-col min-h-screen bg-slate-50">
       <!-- Header -->
       <header class="w-full bg-[#a64b3f] text-white py-4 px-4 md:px-8">
-        <div class="container mx-auto">
+        <div class="container mx-auto flex justify-between items-center">
           <h1 class="text-lg md:text-xl font-bold flex items-center">
             <span class="mr-2">🏆</span>
             Não Deixe Essa Chance Passar:
           </h1>
+          <div id="timer" class="text-lg md:text-xl font-bold flex items-center">
+            <span class="mr-2">⏰</span>
+            <span id="minutes">13</span>:<span id="seconds">00</span>
+          </div>
         </div>
       </header>
 
       <!-- Banner Section -->
       <section class="w-full bg-[#f3e7e5] py-10">
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto">
           <div class="w-full">
             <img 
               src="crianca2.png" 
@@ -202,7 +206,7 @@
       <section class="py-10 px-4 bg-slate-50">
         <div class="container mx-auto max-w-4xl">
           <h2 class="text-xl md:text-2xl text-center font-bold text-gray-700 mb-8">
-            ESPERA! EU PREPAREI ALGO AINDA MELHOR PARA VOCÊ!
+            Resumindo...
           </h2>
           
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -235,10 +239,15 @@
               </div>
             </div>
             
+            <!-- Texto para mobile -->
+            <div class="md:hidden text-center py-4">
+              <h3 class="text-xl font-bold text-gray-700">ESPERA! EU PREPAREI ALGO AINDA MELHOR PARA VOCÊ!</h3>
+            </div>
+            
             <!-- Premium E-book Option -->
             <div class="bg-gradient-to-b from-white to-[#ffcbc4] border-0 overflow-hidden relative flex flex-col rounded-lg shadow">
               <div class="p-6 text-center flex flex-col flex-1">
-                <div class="w-full flex justify-center mb-4" style="margin-bottom: 80px;">
+                <div class="w-full flex justify-center mb-4" style="margin-bottom: 60px;">
                   <img src="coroa.png" alt="Icone coroa" class="top-icon">
                 </div>
                 <h3 class="text-lg font-bold text-gray-700 mb-2">E-book PREMIUM</h3>
@@ -297,5 +306,32 @@
 
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script>
+      function startTimer(duration, display) {
+        let timer = duration;
+        const minutesDisplay = display.querySelector('#minutes');
+        const secondsDisplay = display.querySelector('#seconds');
+        
+        const interval = setInterval(function () {
+          const minutes = parseInt(timer / 60, 10);
+          const seconds = parseInt(timer % 60, 10);
+
+          minutesDisplay.textContent = minutes.toString().padStart(2, '0');
+          secondsDisplay.textContent = seconds.toString().padStart(2, '0');
+
+          if (--timer < 0) {
+            clearInterval(interval);
+            minutesDisplay.textContent = '00';
+            secondsDisplay.textContent = '00';
+          }
+        }, 1000);
+      }
+
+      window.onload = function () {
+        const thirteenMinutes = 13 * 60;
+        const display = document.querySelector('#timer');
+        startTimer(thirteenMinutes, display);
+      };
+    </script>
   </body>
 </html>
